@@ -1,0 +1,71 @@
+:root {
+    --cream:  #F2EFE7;
+    --navy:   #1C2B3A;
+    --green:  #2A7A5B;
+    --border: #DDD9CF;
+}
+ 
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--cream);
+    color: var(--navy);
+}
+ 
+/* NAVBAR */
+.navbar {
+    background: var(--cream);
+    border-bottom: 1px solid var(--border);
+    min-height: 70px;
+}
+ 
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+    color: var(--navy);
+}
+ 
+.nav-logo {
+    background: var(--navy);
+    color: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+ 
+.nav-link {
+    color: var(--navy) !important;
+    font-size: 15px;
+}
+ 
+.nav-link:hover {
+    color: var(--green) !important;
+}
+ 
+.nav-phone {
+    text-decoration: none;
+    color: var(--navy);
+    font-size: 15px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+ 
+.btn-book {
+    background: var(--green);
+    color: white;
+    font-weight: 600;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+ 
+.btn-book:hover {
+    background: #235F47;
+    color: white;
+}
