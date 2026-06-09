@@ -26,8 +26,21 @@
  
                 <div class="collapse navbar-collapse" id="navMenu">
                     <ul class="navbar-nav ms-4">
-                        <li class="nav-item">
-                            <a class="nav-link {{ 'active' if request.endpoint == 'main.services' }}" href="#services">Services</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle {{ 'active' if request.endpoint == 'main.services' }}" 
+                                href="#" role="button" data-bs-toggle="dropdown">
+                                Services
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{{ url_for('main.index') }}#services">All Services</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="{{ url_for('main.services') }}#general">General Consultations</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('main.services') }}#family">Family &amp; Child Health</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('main.services') }}#chronic">Chronic Disease Management</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('main.services') }}#mental-health">Mental Health</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('main.services') }}#womens">Women's Health</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('main.services') }}#skin">Skin Checks &amp; Procedures</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link {{ 'active' if request.endpoint == 'main.team' }}" href="{{ url_for('main.team') }}">Our Team</a>
