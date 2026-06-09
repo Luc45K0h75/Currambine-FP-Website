@@ -6,3 +6,28 @@ main = Blueprint('main', __name__)
 @main.route('/')
 def index():
     return render_template('index.html')
+ 
+ 
+@main.route('/about')
+def about():
+    return render_template('about.html')
+ 
+ 
+@main.route('/services')
+def services():
+    return render_template('services.html')
+ 
+ 
+@main.route('/team')
+def team():
+    return render_template('team.html')
+ 
+ 
+@main.route('/contact')
+def contact():
+    return render_template('contact.html')
+ 
+ 
+@main.route('/appointments')
+def appointments():
+    return render_template('appointments.html')
