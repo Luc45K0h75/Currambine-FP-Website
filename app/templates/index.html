@@ -1,5 +1,243 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<!-- homepage content goes here -->
+<!-- HERO -->
+        <section class="hero">
+            <div class="container">
+                <div class="row align-items-center">
+ 
+                    <!-- Left: Text -->
+                    <div class="col-lg-6 hero-text">
+                        <p class="hero-location">Currambine, Western Australia</p>
+                        <h1 class="hero-heading">
+                            Connection.<br>
+                            Compassion.<br>
+                            <span class="hero-accent">Confidence.</span>
+                        </h1>
+                        <p class="hero-sub">Where patients come first. A comprehensive family practice providing personalised care for every stage of life — from infants to seniors.</p>
+                        <div class="hero-buttons">
+                            <a href="{{ url_for('main.appointments') }}" class="btn btn-primary-cfp">Book an Appointment</a>
+                            <a href="{{ url_for('main.services') }}" class="btn btn-outline-cfp">Our Services</a>
+                        </div>
+                    </div>
+ 
+                    <!-- Right: Image -->
+                    <div class="col-lg-6 hero-image-col">
+                        <div class="hero-image-placeholder">
+                            <i class="bi bi-image"></i>
+                            <span>Hero image goes here</span>
+                        </div>
+                        <!-- Once you have an image, replace the div above with: -->
+                        <!-- <img src="{{ url_for('static', filename='images/hero.jpg') }}" alt="Currambine Family Practice" class="hero-image"> -->
+                    </div>
+ 
+                </div>
+            </div>
+        </section>
+
+<!-- STATS BAR -->
+<section class="stats-bar">
+    <div class="container">
+        <div class="row text-center text-lg-start">
+            <div class="col-6 col-lg-3 stat-item">
+                <i class="bi bi-building stat-icon"></i>
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Years serving Currambine</div>
+            </div>
+            <div class="col-6 col-lg-3 stat-item">
+                <i class="bi bi-heart-pulse stat-icon"></i>
+                <div class="stat-number">7</div>
+                <div class="stat-label">Specialist services</div>
+            </div>
+            <div class="col-6 col-lg-3 stat-item">
+                <i class="bi bi-trophy stat-icon"></i>
+                <div class="stat-number">Award<br>Winning</div>
+                <div class="stat-label">Practice</div>
+            </div>
+            <div class="col-6 col-lg-3 stat-item">
+                <i class="bi bi-calendar-check stat-icon"></i>
+                <div class="stat-number">Same<br>Day</div>
+                <div class="stat-label">Appointments available</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services-section" id="services">
+    <div class="container">
+ 
+        <div class="row mb-5">
+            <div class="col-lg-6">
+                <p class="section-eyebrow">What We Offer</p>
+                <h2 class="section-heading">Services under one roof</h2>
+            </div>
+            <div class="col-lg-6 d-flex align-items-end">
+                <p class="section-sub">We believe in integrated healthcare — having your GP, specialist, and allied health providers all in one place means better-coordinated care and fewer gaps.</p>
+            </div>
+        </div>
+ 
+        <div class="row g-3">
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+                    <i class="bi bi-person-heart service-icon"></i>
+                    <h3 class="service-title">General Consultations</h3>
+                    <p class="service-desc">Comprehensive care for acute illness, chronic disease management, and preventive health for all ages.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+                    <i class="bi bi-people service-icon"></i>
+                    <h3 class="service-title">Family & Child Health</h3>
+                    <p class="service-desc">Dedicated care for growing families including immunisations, developmental checks, and paediatric consultations.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+                    <i class="bi bi-clipboard2-pulse service-icon"></i>
+                    <h3 class="service-title">Chronic Disease Management</h3>
+                    <p class="service-desc">Ongoing management plans for diabetes, hypertension, asthma, and other chronic conditions.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+                    <i class="bi bi-chat-heart service-icon"></i>
+                    <h3 class="service-title">Mental Health</h3>
+                    <p class="service-desc">Compassionate support including Mental Health Care Plans, counselling referrals, and ongoing reviews.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+                    <i class="bi bi-gender-female service-icon"></i>
+                    <h3 class="service-title">Women's Health</h3>
+                    <p class="service-desc">Cervical screening, contraception, pregnancy care, menopause management, and breast health assessments.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+                    <i class="bi bi-bandaid service-icon"></i>
+                    <h3 class="service-title">Skin Checks & Procedures</h3>
+                    <p class="service-desc">Skin cancer checks, mole mapping, and minor surgical procedures performed on-site by experienced GPs.</p>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="row mt-4">
+            <div class="col text-center">
+                <a href="{{ url_for('main.services') }}" class="btn btn-outline-cfp">View All Services</a>
+            </div>
+        </div>
+ 
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-section">
+    <div class="row g-0">
+ 
+        <!-- Left: Image (full bleed) -->
+        <div class="col-lg-6 about-image-col">
+            <!-- <img src="{{ url_for('static', filename='images/about.jpg') }}" alt="About Currambine Family Practice" class="about-image"> -->
+            <div class="about-image-placeholder">
+                <i class="bi bi-image"></i>
+                <span>About image goes here</span>
+            </div>
+        </div>
+ 
+        <!-- Right: Text -->
+        <div class="col-lg-6 about-text">
+            <p class="section-eyebrow eyebrow-light">About the Practice</p>
+            <h2 class="about-heading">Healthcare that puts people first</h2>
+            <p class="about-desc">Currambine Family Practice has served the northern suburbs of Perth for over two decades. We are a comprehensive, multi-disciplinary practice where GPs work alongside allied health professionals under one roof.</p>
+            <p class="about-desc">We believe that good healthcare is built on continuity — knowing your patients, their families, and the full context of their lives. Our GPs build long-term relationships so every consultation starts from a foundation of trust.</p>
+            <p class="about-desc">We hold provider numbers for Medicare bulk billing, making quality care accessible to all eligible patients.</p>
+            <a href="{{ url_for('main.about') }}" class="btn btn-light-cfp mt-2">Learn More About Us</a>
+        </div>
+ 
+    </div>
+</section>
+
+<!-- HOURS & LOCATION -->
+<section class="hours-section" id="hours">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col">
+                <p class="section-eyebrow">Find Us</p>
+                <h2 class="section-heading">Hours &amp; Location</h2>
+            </div>
+        </div>
+        <div class="row g-5">
+ 
+            <!-- Left: Hours + Contact -->
+            <div class="col-lg-6">
+                <h5 class="hours-subtitle"><i class="bi bi-clock me-2"></i>Opening Hours</h5>
+                <table class="hours-table w-100">
+                    <tr class="hours-row today">
+                        <td class="hours-day">Monday – Friday <span class="today-badge">Today</span></td>
+                        <td class="hours-time">8:00 am – 5:00 pm</td>
+                    </tr>
+                    <tr class="hours-row">
+                        <td class="hours-day">Saturday</td>
+                        <td class="hours-time">8:00 am – 12:00 pm</td>
+                    </tr>
+                    <tr class="hours-row">
+                        <td class="hours-day">Sunday</td>
+                        <td class="hours-time closed">Closed</td>
+                    </tr>
+                    <tr class="hours-row">
+                        <td class="hours-day">Public Holidays</td>
+                        <td class="hours-time closed">Closed</td>
+                    </tr>
+                </table>
+ 
+                <div class="contact-details mt-5">
+                    <div class="contact-row">
+                        <i class="bi bi-geo-alt contact-icon"></i>
+                        <div>
+                            <strong>Address</strong>
+                            <span>Unit 2, 4 Hobsons Gate<br>Currambine WA 6028</span>
+                        </div>
+                    </div>
+                    <div class="contact-row">
+                        <i class="bi bi-telephone contact-icon"></i>
+                        <div>
+                            <strong>Phone</strong>
+                            <span><a href="tel:0893041120">(08) 9304 1120</a></span>
+                        </div>
+                    </div>
+                    <div class="contact-row">
+                        <i class="bi bi-telephone contact-icon"></i>
+                        <div>
+                            <strong>Fax</strong>
+                            <span>(08) 9304 1145</span>
+                        </div>
+                    </div>
+                    <div class="contact-row">
+                        <i class="bi bi-envelope contact-icon"></i>
+                        <div>
+                            <strong>Reception</strong>
+                            <span><a href="mailto:reception@oceankeysfp.com.au">reception@oceankeysfp.com.au</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+ 
+            <!-- Right: Google Maps -->
+            <div class="col-lg-6">
+                <div class="map-embed">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3385.2!2d115.7533!3d-31.7285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2a32b3e0b1234567%3A0x1234567890abcdef!2s4%20Hobsons%20Gate%2C%20Currambine%20WA%206028!5e0!3m2!1sen!2sau!4v1234567890"
+                        width="100%"
+                        height="100%"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+ 
+        </div>
+    </div>
+</section>
 {% endblock %}
