@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+    <div class="container">
+        <p class="section-eyebrow">Who We Are</p>
+        <h1 class="page-heading">About Us</h1>
+    </div>
+</section>
+
+<!-- INTRO -->
+<section class="about-intro">
+    <div class="row g-0 align-items-stretch">
+        <div class="col-lg-6 about-intro-image">
+            <!-- <img src="{{ url_for('static', filename='images/about-reception.jpg') }}" alt="Currambine Family Practice reception" class="about-img"> -->
+            <div class="about-img-placeholder">
+                <i class="bi bi-image"></i>
+                <span>Reception image goes here</span>
+            </div>
+        </div>
+        <div class="col-lg-6 about-intro-text">
+            <p class="section-eyebrow">About the Practice</p>
+            <h2 class="about-heading">About us</h2>
+            <p>Currambine Family Practice is an independent, doctor owned medical practice established in 2010. We provide quality primary health care in the northern suburbs and are unwavering in our commitment to excellence in ethical and clinical standards in general practice.</p>
+        </div>
+    </div>
+</section>
+
+<!-- VALUES -->
+<section class="about-values">
+    <div class="container">
+
+        <div class="row g-4 mb-5">
+            <div class="col-lg-4">
+                <div class="value-card">
+                    <i class="bi bi-heart-pulse value-icon"></i>
+                    <h3 class="about-values-heading">Your wellbeing is our priority</h3>
+                    <p class="about-values-text">Our team of doctors, allied health professionals, nurses and administrative staff work collaboratively to ensure that patient care is comprehensive and holistic.</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="value-card">
+                    <i class="bi bi-person-heart value-icon"></i>
+                    <h3 class="about-values-heading">Personalised care</h3>
+                    <p class="about-values-text">We prioritise your health journey by catering to your individual needs and providing the best experience for you and your family.</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="value-card">
+                    <i class="bi bi-people value-icon"></i>
+                    <h3 class="about-values-heading">Taking care of the community</h3>
+                    <p class="about-values-text">We will always make every attempt to see emergencies, sick children and the elderly.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- TRAINING -->
+<section class="about-training">
+    <div class="container text-center">
+        <p class="section-eyebrow">Education & Research</p>
+        <h2 class="about-training-heading">Training future doctors and research</h2>
+        <p class="about-training-text">We are dedicated to training the next generation of general practitioners and are actively involved in general practice research.</p>
+    </div>
+</section>
+
+<!-- AWARDS -->
+<section class="about-awards">
+    <div class="container">
+        <p class="section-eyebrow text-center">Recognition</p>
+        <h2 class="about-awards-heading text-center">Award winning practice</h2>
+        <p class="about-awards-sub text-center">Our award winning practice is fully accredited with AGPAL.</p>
+
+        <div class="row g-4 mt-4 justify-content-center">
+
+            <div class="col-md-4">
+                <div class="award-card">
+                    <img src="{{ url_for('static', filename='images/racgp.png') }}" alt="RACGP" class="award-logo">
+                    <h5 class="award-title">Royal Australian College of General Practitioners</h5>
+                    <p class="award-desc">Faculty Legend Award to Dr Tim Koh 2009<br>Edward Gawthorn Prize to Dr Heather Brand 2011</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="award-card">
+                    <img src="{{ url_for('static', filename='images/wagpet.png') }}" alt="WAGPET" class="award-logo">
+                    <h5 class="award-title">WA General Practice Education and Training</h5>
+                    <p class="award-desc">2011 Practice of the Year</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="award-card">
+                    <img src="{{ url_for('static', filename='images/agpal.png') }}" alt="AGPAL" class="award-logo">
+                    <h5 class="award-title">Australian General Practice Accreditation</h5>
+                    <p class="award-desc">Accredited General Practice</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}
