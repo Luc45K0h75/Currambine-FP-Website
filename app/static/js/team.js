@@ -22,11 +22,18 @@ function filterTeam(categoryId, btn) {
 document.getElementById('bioModal').addEventListener('show.bs.modal', function(event) {
     const btn = event.relatedTarget;
     const photoUrl = btn.dataset.photo;
+    const quals = btn.dataset.quals;
+    const bio = btn.dataset.bio;
 
     document.getElementById('modalName').textContent = btn.dataset.name;
     document.getElementById('modalType').textContent = btn.dataset.type;
-    document.getElementById('modalQuals').textContent = btn.dataset.quals;
-    document.getElementById('modalBio').textContent = btn.dataset.bio;
+
+    const bioEl = document.getElementById('modalBio');
+    if (quals) {
+        bioEl.innerHTML = '<strong>' + quals + '</strong><br><br>' + bio;
+    } else {
+        bioEl.textContent = bio;
+    }
 
     const photoEl = document.getElementById('modalPhoto');
     if (photoUrl) {
