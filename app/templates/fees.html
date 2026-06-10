@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+    <div class="container">
+        <p class="section-eyebrow">For Patients</p>
+        <h1 class="page-heading">Fees &amp; Cancellations</h1>
+    </div>
+</section>
+
+<!-- FEES -->
+<section class="fees-section">
+    <div class="container">
+        <div class="row g-5">
+
+            <!-- Left: Fees -->
+            <div class="col-lg-7">
+                <p class="section-eyebrow">Consultation Fees</p>
+                <h2 class="fees-heading">Our Fees</h2>
+                <p class="fees-intro">Currambine is a private billing practice. Fees vary depending on the length of consultation and are a guide only.</p>
+
+                <!-- Weekday fees -->
+                <h5 class="fees-subheading">Standard Hours</h5>
+                <table class="fees-table w-100">
+                    <tr class="fees-row">
+                        <td class="fees-item">Standard Appointment</td>
+                        <td class="fees-price">$95.00</td>
+                    </tr>
+                    <tr class="fees-row">
+                        <td class="fees-item">Long Appointment</td>
+                        <td class="fees-price">$160.00</td>
+                    </tr>
+                    <tr class="fees-row">
+                        <td class="fees-item">Telehealth</td>
+                        <td class="fees-price">$95.00</td>
+                    </tr>
+                    <tr class="fees-row">
+                        <td class="fees-item">Implanon Insertion</td>
+                        <td class="fees-price">$200.00</td>
+                    </tr>
+                    <tr class="fees-row">
+                        <td class="fees-item">Implanon Removal</td>
+                        <td class="fees-price">$200.00</td>
+                    </tr>
+                    <tr class="fees-row">
+                        <td class="fees-item">Mirena Insertion</td>
+                        <td class="fees-price">$300.00</td>
+                    </tr>
+                    <tr class="fees-row">
+                        <td class="fees-item">Iron Infusion</td>
+                        <td class="fees-price">$250 / $300</td>
+                    </tr>
+                </table>
+
+                <!-- Saturday fees -->
+                <h5 class="fees-subheading mt-4">Saturdays</h5>
+                <table class="fees-table w-100">
+                    <tr class="fees-row">
+                        <td class="fees-item">Standard Appointment</td>
+                        <td class="fees-price">$110.00</td>
+                    </tr>
+                    <tr class="fees-row">
+                        <td class="fees-item">Long Appointment</td>
+                        <td class="fees-price">$180.00</td>
+                    </tr>
+                </table>
+
+                <div class="fees-notice mt-4">
+                    <i class="bi bi-info-circle me-2"></i>
+                    Fees are a guide only. Each doctor reserves the right to vary fees at their own discretion. If you are experiencing financial hardship, let us know and we can make alternative arrangements if possible.
+                </div>
+
+            </div>
+
+            <!-- Right: Billing info -->
+            <div class="col-lg-5">
+                <p class="section-eyebrow">Billing Information</p>
+                <h2 class="fees-heading">Billing &amp; Medicare</h2>
+
+                <div class="billing-card">
+                    <i class="bi bi-clock billing-icon"></i>
+                    <h5 class="billing-title">After Hours &amp; Saturday Fees</h5>
+                    <p class="billing-text">All appointments scheduled before 8am or after 5pm and on Saturdays will be privately billed. This includes children, pensioners and health care card holders.</p>
+                </div>
+
+                <div class="billing-card">
+                    <i class="bi bi-laptop billing-icon"></i>
+                    <h5 class="billing-title">Telehealth Appointments</h5>
+                    <p class="billing-text">Telehealth appointments are privately billed. Children and pensioners may be bulk billed by selected doctors. Please check with our reception team when you book.</p>
+                </div>
+
+                <div class="billing-card">
+                    <i class="bi bi-credit-card billing-icon"></i>
+                    <h5 class="billing-title">Health Care Card Holders</h5>
+                    <p class="billing-text">Health Care Card holders will be privately billed at a reduced rate. Bulk billing may be available — please discuss this with your doctor.</p>
+                </div>
+
+                <div class="billing-card">
+                    <i class="bi bi-person-badge billing-icon"></i>
+                    <h5 class="billing-title">Pension Card Holders &amp; Children Under 12</h5>
+                    <p class="billing-text">Current pension cardholders and children under 12 years old may be bulk billed by selected doctors during regular office hours.</p>
+                </div>
+
+                <div class="billing-card">
+                    <i class="bi bi-bank billing-icon"></i>
+                    <h5 class="billing-title">Medicare Claims</h5>
+                    <p class="billing-text">We can lodge your Medicare claim on your behalf electronically immediately after your appointment. In most cases Medicare will pay the rebate into your account by the end of the next business day.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Cancellations -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="cancellation-card">
+                    <div class="d-flex align-items-start gap-3">
+                        <i class="bi bi-calendar-x cancellation-icon"></i>
+                        <div>
+                            <h4 class="cancellation-title">Cancellations</h4>
+                            <p class="cancellation-text">Please advise us if you need to cancel your appointment as soon as possible so that we can care for someone else. We may charge a fee if you repeatedly fail to attend for your appointment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="about-cta">
+    <div class="container text-center">
+        <h2 class="about-cta-heading">Ready to book an appointment?</h2>
+        <a href="https://automedsystems.com.au/ams/clinics/5041/ocean-keys-and-currambine-family-practice-clarkson-6030/doctors/loc/2"
+           class="btn btn-primary-cfp mt-3">Book Online</a>
+    </div>
+</section>
+
+{% endblock %}

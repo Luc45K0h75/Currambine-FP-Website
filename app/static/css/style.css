@@ -1201,3 +1201,126 @@ body {
         padding: 24px;
     }
 }
+
+/* ── FEES PAGE ── */
+.fees-section {
+    padding: 80px 0;
+    background: var(--cream);
+}
+
+.fees-heading {
+    font-size: clamp(24px, 2.5vw, 32px);
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 16px;
+}
+
+.fees-intro {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--grey);
+    margin-bottom: 28px;
+}
+
+.fees-subheading {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--green);
+    display: inline-block;
+}
+
+.fees-table {
+    border-collapse: collapse;
+    margin-bottom: 8px;
+}
+
+.fees-row {
+    border-bottom: 1px solid var(--border);
+}
+
+.fees-row td {
+    padding: 12px 0;
+    font-size: 15px;
+    color: var(--navy);
+}
+
+.fees-price {
+    text-align: right;
+    font-weight: 600;
+    color: var(--green);
+}
+
+.fees-notice {
+    background: #EBF5F0;
+    border: 1px solid #B8DDD0;
+    border-radius: 4px;
+    padding: 16px 20px;
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--green-dark);
+}
+
+.billing-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--green);
+    padding: 20px 24px;
+    margin-bottom: 16px;
+}
+
+.billing-icon {
+    font-size: 20px;
+    color: var(--green);
+    margin-bottom: 10px;
+    display: block;
+}
+
+.billing-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 8px;
+}
+
+.billing-text {
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--grey);
+    margin-bottom: 0;
+}
+
+.cancellation-card {
+    background: var(--navy);
+    padding: 32px 40px;
+    border-radius: 2px;
+}
+
+.cancellation-icon {
+    font-size: 28px;
+    color: var(--green);
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
+.cancellation-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.cancellation-text {
+    font-size: 15px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 0;
+}
+
+@media (max-width: 991px) {
+    .fees-section {
+        padding: 56px 0;
+    }
+}
