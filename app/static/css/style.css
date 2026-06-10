@@ -1324,3 +1324,74 @@ body {
         padding: 56px 0;
     }
 }
+
+/* ── CONTACT PAGE ── */
+.contact-section {
+    padding: 80px 0;
+    background: var(--cream);
+}
+
+.contact-heading {
+    font-size: clamp(22px, 2.5vw, 30px);
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 28px;
+}
+
+.contact-book-card {
+    background: var(--navy);
+    padding: 32px 36px;
+}
+
+.contact-book-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 12px;
+}
+
+.contact-book-text {
+    font-size: 14px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 24px;
+}
+
+.btn-contact-call {
+    background: transparent;
+    color: white;
+    border: 1.5px solid rgba(255,255,255,0.4);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 0;
+    transition: all 0.2s;
+}
+
+.btn-contact-call:hover {
+    background: white;
+    color: var(--navy);
+    border-color: white;
+}
+
+.btn-contact-book {
+    background: var(--green);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 0;
+    border: none;
+    transition: background 0.2s;
+}
+
+.btn-contact-book:hover {
+    background: var(--green-dark);
+    color: white;
+}
+
+@media (max-width: 991px) {
+    .contact-section {
+        padding: 56px 0;
+    }
+}

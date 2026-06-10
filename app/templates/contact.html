@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+    <div class="container">
+        <p class="section-eyebrow">Get In Touch</p>
+        <h1 class="page-heading">Hours &amp; Location</h1>
+    </div>
+</section>
+
+<!-- HOURS & CONTACT -->
+<section class="contact-section">
+    <div class="container">
+        <div class="row g-5">
+
+            <!-- Left: Hours + Contact Details -->
+            <div class="col-lg-6">
+
+                <!-- Opening Hours -->
+                <p class="section-eyebrow">Opening Hours</p>
+                <h2 class="contact-heading">When We're Open</h2>
+                <table class="hours-table w-100 mb-5">
+                    <tr class="hours-row today">
+                        <td class="hours-day">Monday – Friday <span class="today-badge">Today</span></td>
+                        <td class="hours-time">8:00 am – 5:00 pm</td>
+                    </tr>
+                    <tr class="hours-row">
+                        <td class="hours-day">Saturday</td>
+                        <td class="hours-time">8:00 am – 12:00 pm</td>
+                    </tr>
+                    <tr class="hours-row">
+                        <td class="hours-day">Sunday</td>
+                        <td class="hours-time closed">Closed</td>
+                    </tr>
+                    <tr class="hours-row">
+                        <td class="hours-day">Public Holidays</td>
+                        <td class="hours-time closed">Closed</td>
+                    </tr>
+                </table>
+
+                <!-- Contact Details -->
+                <p class="section-eyebrow">Contact Details</p>
+                <h2 class="contact-heading">How To Reach Us</h2>
+                <div class="contact-details">
+                    <div class="contact-row">
+                        <i class="bi bi-geo-alt contact-icon"></i>
+                        <div>
+                            <strong>Address</strong>
+                            <span>Unit 2, 4 Hobsons Gate<br>Currambine WA 6028</span>
+                        </div>
+                    </div>
+                    <div class="contact-row">
+                        <i class="bi bi-telephone contact-icon"></i>
+                        <div>
+                            <strong>Phone</strong>
+                            <span><a href="tel:0893041120">(08) 9304 1120</a></span>
+                        </div>
+                    </div>
+                    <div class="contact-row">
+                        <i class="bi bi-printer contact-icon"></i>
+                        <div>
+                            <strong>Fax</strong>
+                            <span>(08) 9304 1145</span>
+                        </div>
+                    </div>
+                    <div class="contact-row">
+                        <i class="bi bi-envelope contact-icon"></i>
+                        <div>
+                            <strong>Reception</strong>
+                            <span><a href="mailto:reception@oceankeysfp.com.au">reception@oceankeysfp.com.au</a></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dental Contact -->
+                <div class="dental-contact mt-5">
+                    <p class="section-eyebrow">Dental</p>
+                    <h2 class="contact-heading">Dental Enquiries</h2>
+                    <div class="contact-details">
+                        <div class="contact-row">
+                            <i class="bi bi-globe contact-icon"></i>
+                            <div>
+                                <strong>Website</strong>
+                                <span><a href="https://www.cfpdental.com/home" target="_blank">www.cfpdental.com</a></span>
+                            </div>
+                        </div>
+                        <div class="contact-row">
+                            <i class="bi bi-telephone contact-icon"></i>
+                            <div>
+                                <strong>Phone</strong>
+                                <span><a href="tel:0402210273">0402 210 273</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right: Map + Booking CTA -->
+            <div class="col-lg-6">
+                <p class="section-eyebrow">Find Us</p>
+                <h2 class="contact-heading">Our Location</h2>
+                <div class="map-embed mb-4">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3393.156472502702!2d115.73544042518616!3d-31.738929724114588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2bcd54926a485287%3A0x5afbc1d5e896ade2!2s4%20Hobsons%20Gate%2C%20Currambine%20WA%206028!5e0!3m2!1sen!2sau!4v1780980953181!5m2!1sen!2sau"
+                        width="100%"
+                        height="100%"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+                <!-- Booking CTA -->
+                <div class="contact-book-card">
+                    <h4 class="contact-book-title">Book your appointment online</h4>
+                    <p class="contact-book-text">Download the AMS Connect app on iOS or Android to book, manage, and view your appointments 24/7.</p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="tel:0893041120" class="btn btn-contact-call">
+                            <i class="bi bi-telephone me-2"></i>Call Us
+                        </a>
+                        <a href="https://automedsystems.com.au/ams/clinics/5041/ocean-keys-and-currambine-family-practice-clarkson-6030/doctors/loc/2"
+                           class="btn btn-contact-book" target="_blank">
+                            Book Online
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
