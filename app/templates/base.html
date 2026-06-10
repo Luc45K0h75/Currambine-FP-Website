@@ -44,7 +44,7 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{ 'active' if request.endpoint == 'main.team' }}" href="{{ url_for('main.team') }}">Our Team</a>
+                            <a class="nav-link {{ 'active' if request.endpoint == 'team.team_page' }}" href="{{ url_for('team.team_page') }}">Our Team</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link {{ 'active' if request.endpoint == 'main.about' }}" href="{{ url_for('main.about') }}">About</a>
@@ -107,7 +107,7 @@
                             <li><a href="{{ url_for('main.index') }}">Home</a></li>
                             <li><a href="{{ url_for('main.about') }}">About</a></li>
                             <li><a href="{{ url_for('main.services') }}">Services</a></li>
-                            <li><a href="{{ url_for('main.team') }}">Our Team</a></li>
+                            <li><a href="{{ url_for('team.team_page') }}">Our Team</a></li>
                             <li><a href="{{ url_for('main.contact') }}">Hours &amp; Location</a></li>
                         </ul>
                     </div>

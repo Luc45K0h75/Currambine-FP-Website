@@ -18,13 +18,6 @@ def services():
     return render_template('services.html')
  
  
-@main.route('/team')
-def team():
-    from app.models import Profile, DoctorType
-    categories = DoctorType.query.order_by(DoctorType.type_id).all()
-    return render_template('team.html', categories=categories)
- 
- 
 @main.route('/contact')
 def contact():
     return render_template('contact.html')
