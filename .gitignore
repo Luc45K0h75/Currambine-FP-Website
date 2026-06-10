@@ -13,6 +13,7 @@ __pycache__/
 venv/
 .venv/
 env/
+seed.py
 
 # OS
 .DS_Store

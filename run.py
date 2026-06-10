@@ -1,8 +1,9 @@
 from dotenv import load_dotenv
+from pathlib import Path
+
+load_dotenv(Path(__file__).parent / '.env')
 from app import create_app, db
 from app.models import Profile, DoctorType
-
-load_dotenv()
 
 app = create_app()
 

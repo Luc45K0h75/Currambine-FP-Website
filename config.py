@@ -2,13 +2,9 @@ import os
 from datetime import timedelta
 
 class Config:
-    SECRET_KEY = os.environ.get('SECRET_KEY')
-    if not SECRET_KEY:
-        raise ValueError('No SECRET_KEY set in environment variables')
-
+    SECRET_KEY = os.environ.get('SECRET_KEY', 'dev-fallback-key')
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL', 'sqlite:///practice.db')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-
     SESSION_COOKIE_HTTPONLY = True
     SESSION_COOKIE_SAMESITE = 'Lax'
     PERMANENT_SESSION_LIFETIME = timedelta(minutes=30)
@@ -22,3 +18,4 @@ class DevelopmentConfig(Config):
 class ProductionConfig(Config):
     DEBUG = False
     SESSION_COOKIE_SECURE = True
+    SECRET_KEY = os.environ.get('SECRET_KEY')

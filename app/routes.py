@@ -20,7 +20,9 @@ def services():
  
 @main.route('/team')
 def team():
-    return render_template('team.html')
+    from app.models import Profile, DoctorType
+    categories = DoctorType.query.order_by(DoctorType.type_id).all()
+    return render_template('team.html', categories=categories)
  
  
 @main.route('/contact')
