@@ -1126,3 +1126,78 @@ body {
         height: 200px;
     }
 }
+
+/* ── BIO MODAL ── */
+.bio-modal-content {
+    border: none;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.bio-modal-header {
+    background: var(--navy);
+    border: none;
+    padding: 12px 16px;
+}
+
+.bio-modal-photo-col {
+    padding: 0;
+}
+
+.bio-modal-photo {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+}
+
+.bio-modal-text {
+    padding: 36px 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bio-modal-name {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 4px;
+}
+
+.bio-modal-bio {
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--grey);
+    margin-bottom: 0;
+}
+
+.team-bio-btn {
+    background: transparent;
+    color: var(--navy);
+    border: 1.5px solid var(--border);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    padding: 8px 0;
+    border-radius: 0;
+    transition: all 0.2s;
+}
+
+.team-bio-btn:hover {
+    background: var(--navy);
+    color: white;
+    border-color: var(--navy);
+}
+
+@media (max-width: 767px) {
+    .bio-modal-photo-col {
+        display: none !important;
+    }
+
+    .bio-modal-text {
+        padding: 24px;
+    }
+}
