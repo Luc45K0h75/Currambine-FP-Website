@@ -13,11 +13,15 @@ def create_app():
     db.init_app(app)
     migrate.init_app(app, db)
 
-    # Import models to register them with SQLAlchemy
+    # Import models so Flask-Migrate can detect them
     from app import models
 
-    # Register routes
+    # Register main routes
     from app import routes
     app.register_blueprint(routes.main)
+
+    # Register team blueprint
+    from app.blueprints.team import team as team_bp
+    app.register_blueprint(team_bp)
 
     return app
