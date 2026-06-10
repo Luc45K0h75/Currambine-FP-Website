@@ -24,4 +24,8 @@ def create_app():
     from app.blueprints.team import team as team_bp
     app.register_blueprint(team_bp)
 
+    # Register fellows blueprint
+    from app.blueprints.fellows import fellows as fellows_bp
+    app.register_blueprint(fellows_bp)
+
     return app
