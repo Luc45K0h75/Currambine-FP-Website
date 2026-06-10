@@ -1,4 +1,4 @@
-from flask import render_template, flash
+from flask import render_template, flash, redirect, url_for
 from app.models import Profile, DoctorType
 from . import fellows
 from app import limiter, mail
@@ -6,9 +6,9 @@ from .forms import FellowsApplicationForm
 from flask_mail import Message
 import os
 
+@fellows.route('/fellows', methods=['GET', 'POST'])
 @limiter.limit("10 per minute") #DDOS protection: limit to 10 requests per minute
-@fellows.route('/fellows')
-def fellows():
+def fellows_page():
     form = FellowsApplicationForm()
 
     # CSRF protection and form handling
@@ -17,7 +17,7 @@ def fellows():
             subject="New Fellow Application",
             recipients=[os.getenv('MAIL_RECEIVER')],
             body=f'''
-New Fellows Application
+New Fellows Application for Currambine Family Practice
 
 Name: {form.name.data}
 Email: {form.email.data}
@@ -33,6 +33,7 @@ Please ask them to send their CV to {os.environ.get('MAIL_RECEIVER')}
         )
         mail.send(msg)
                       
-        return render_template('fellows.html', form=form)
+        flash('Your application has been submitted successfully. We will be in touch soon.', 'success')
+        return redirect(url_for('fellows.fellows_page'))
 
-    return render_template('fellows.html')
+    return render_template('fellows.html', form=form)

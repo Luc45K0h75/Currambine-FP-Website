@@ -1,0 +1,156 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+    <div class="container">
+        <p class="section-eyebrow">Work With Us</p>
+        <h1 class="page-heading">Fellowed GPs</h1>
+    </div>
+</section>
+
+<!-- INTRO -->
+<section class="work-intro">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+
+            <div class="col-lg-6">
+                <p class="section-eyebrow">Fellowship Opportunity</p>
+                <h2 class="work-heading">Fellowed VR GPs</h2>
+                <p class="work-text">Currambine Family Practice offers GPs an opportunity to run their business in a family friendly, modern, purpose built practice with a fantastic team of Doctors, Nurses and Admin staff.</p>
+                <div class="work-vacancy-alert">
+                    <i class="bi bi-megaphone me-2"></i>
+                    We are always looking for great GPs to join our team
+                </div>
+                <p class="work-text mt-4">With on-site Pathology, a well-equipped Treatment Room and separate procedure room, experienced CDM and treatment room nursing support, on-site allied services, and within close proximity to Pharmacies and other allied services, tenancy at Currambine Family Practice could be the opportunity you have been looking for.</p>
+                <p class="work-text">We are also a fully accredited training practice who actively support GP Registrars and Medical Students.</p>
+
+                <div class="work-highlights mt-2">
+                    <div class="work-highlight-item">
+                        <i class="bi bi-check-circle work-highlight-icon"></i>
+                        <span>Modern, purpose built practice</span>
+                    </div>
+                    <div class="work-highlight-item">
+                        <i class="bi bi-check-circle work-highlight-icon"></i>
+                        <span>Onsite pathology and treatment rooms</span>
+                    </div>
+                    <div class="work-highlight-item">
+                        <i class="bi bi-check-circle work-highlight-icon"></i>
+                        <span>Experienced CDM and nursing support</span>
+                    </div>
+                    <div class="work-highlight-item">
+                        <i class="bi bi-check-circle work-highlight-icon"></i>
+                        <span>Onsite allied health services</span>
+                    </div>
+                    <div class="work-highlight-item">
+                        <i class="bi bi-check-circle work-highlight-icon"></i>
+                        <span>AGPAL accredited training practice</span>
+                    </div>
+                    <div class="work-highlight-item">
+                        <i class="bi bi-check-circle work-highlight-icon"></i>
+                        <span>GP owned, private billing rooms</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="work-image-placeholder">
+                    <i class="bi bi-image"></i>
+                    <span>Practice image goes here</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- APPLICATION FORM -->
+<section class="work-form-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-7">
+                <p class="section-eyebrow">Apply Now</p>
+                <h2 class="work-heading">Express Your Interest</h2>
+                <p class="work-text mb-4">Fill out the form below and we'll be in touch. Please email your CV separately to <a href="mailto:reception@oceankeysfp.com.au">reception@oceankeysfp.com.au</a>.</p>
+
+                <!-- Flash messages -->
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                        <div class="alert alert-{{ 'success' if category == 'success' else 'danger' }} mb-4">
+                            {{ message }}
+                        </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+
+                <form method="POST" class="work-form">
+                    {{ form.hidden_tag() }}
+
+                    <div class="mb-4">
+                        {{ form.name.label(class="work-form-label") }}
+                        {{ form.name(class="form-control work-form-input", placeholder="Dr Jane Smith") }}
+                        {% if form.name.errors %}
+                            <div class="work-form-error">{{ form.name.errors[0] }}</div>
+                        {% endif %}
+                    </div>
+
+                    <div class="mb-4">
+                        {{ form.email.label(class="work-form-label") }}
+                        {{ form.email(class="form-control work-form-input", placeholder="jane@example.com") }}
+                        {% if form.email.errors %}
+                            <div class="work-form-error">{{ form.email.errors[0] }}</div>
+                        {% endif %}
+                    </div>
+
+                    <div class="mb-4">
+                        {{ form.phone.label(class="work-form-label") }}
+                        {{ form.phone(class="form-control work-form-input", placeholder="04XX XXX XXX") }}
+                        {% if form.phone.errors %}
+                            <div class="work-form-error">{{ form.phone.errors[0] }}</div>
+                        {% endif %}
+                    </div>
+
+                    <div class="mb-4">
+                        <div class="work-form-check">
+                            {{ form.is_fracgp(class="form-check-input") }}
+                            {{ form.is_fracgp.label(class="form-check-label work-form-check-label") }}
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        {{ form.about.label(class="work-form-label") }}
+                        {{ form.about(class="form-control work-form-input", rows=6, placeholder="Tell us about yourself, your experience and what you're looking for...") }}
+                        {% if form.about.errors %}
+                            <div class="work-form-error">{{ form.about.errors[0] }}</div>
+                        {% endif %}
+                    </div>
+
+                    <div class="work-form-notice mb-4">
+                        <i class="bi bi-info-circle me-2"></i>
+                        Please email your CV to <a href="mailto:reception@oceankeysfp.com.au">reception@oceankeysfp.com.au</a>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary-cfp w-100">Submit Application</button>
+
+                </form>
+
+                <div class="work-direct-contact mt-4">
+                    <p class="work-text">Prefer to get in touch directly? Email <a href="mailto:ckoh@oceankeysfp.com.au">ckoh@oceankeysfp.com.au</a></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="about-cta">
+    <div class="container text-center">
+        <h2 class="about-cta-heading">Where Patients Come First</h2>
+        <a href="{{ url_for('main.about') }}" class="btn btn-primary-cfp mt-3">Learn More About Us</a>
+    </div>
+</section>
+
+{% endblock %}
