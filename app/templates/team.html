@@ -73,6 +73,17 @@
                             </div>
                             {% endif %}
 
+                            <!-- Website link -->
+                            {% if profile.name == 'Nicola Gibson' %}
+                            <div class="px-3 pb-3"><a href="https://www.theapelvichealth.com.au/" target="_blank" class="btn team-bio-btn w-100">Visit Website <i class="bi bi-arrow-up-right"></i></a></div>
+                            {% elif profile.name == 'Cindy Cabeleira' %}
+                            <div class="px-3 pb-3"><a href="https://theneuropsychclinic.com.au/" target="_blank" class="btn team-bio-btn w-100">Visit Website <i class="bi bi-arrow-up-right"></i></a></div>
+                            {% elif profile.name == 'Eu-Jinn Teh' %}
+                            <div class="px-3 pb-3"><a href="https://www.suncareskindoctors.com.au/" target="_blank" class="btn team-bio-btn w-100">Visit Website <i class="bi bi-arrow-up-right"></i></a></div>
+                            {% elif profile.name == 'Hang Pham' %}
+                            <div class="px-3 pb-3"><a href="https://www.cfpdental.com/home" target="_blank" class="btn team-bio-btn w-100">Visit Website <i class="bi bi-arrow-up-right"></i></a></div>
+                            {% endif %}
+
                         </div>
                     </div>
                     {% endfor %}
