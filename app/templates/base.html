@@ -76,12 +76,12 @@
 
                         <!-- Work With Us -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle {{ 'active' if request.endpoint in ['main.fellows', 'main.registrars'] }}"
+                            <a class="nav-link dropdown-toggle {{ 'active' if request.endpoint in ['fellows.fellows', 'main.registrars'] }}"
                                 href="#" role="button" data-bs-toggle="dropdown">
                                 Work With Us
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="{{ url_for('main.fellows') }}">Fellows</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('fellows.fellows') }}">Fellows</a></li>
                                 <li><a class="dropdown-item" href="{{ url_for('main.registrars') }}">Registrars</a></li>
                             </ul>
                         </li>
@@ -140,7 +140,7 @@
                         </ul>
                         <h6 class="footer-heading mt-4">Work With Us</h6>
                         <ul class="footer-links">
-                            <li><a href="{{ url_for('main.fellows') }}">Fellows</a></li>
+                            <li><a href="{{ url_for('fellows.fellows') }}">Fellows</a></li>
                             <li><a href="{{ url_for('main.registrars') }}">Registrars</a></li>
                         </ul>
                     </div>
