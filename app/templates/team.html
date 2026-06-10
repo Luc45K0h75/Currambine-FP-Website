@@ -1,3 +1,113 @@
 {% extends 'base.html' %}
+
 {% block content %}
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+    <div class="container">
+        <p class="section-eyebrow">The People Behind the Practice</p>
+        <h1 class="page-heading">Meet Our Team</h1>
+    </div>
+</section>
+
+<!-- FILTER BUTTONS -->
+<section class="team-filter">
+    <div class="container">
+        <div class="d-flex flex-wrap gap-2">
+            <button class="btn services-nav-btn active" onclick="filterTeam('all')">All</button>
+            {% for category in categories %}
+            <button class="btn services-nav-btn" onclick="filterTeam('{{ category.type_id }}')">{{ category.type }}</button>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- TEAM GRID -->
+<section class="team-section">
+    <div class="container">
+        {% for category in categories %}
+            {% if category.profiles %}
+            <div class="team-category" id="category-{{ category.type_id }}">
+                <h2 class="team-category-heading">{{ category.type }}s</h2>
+                <div class="row g-4">
+                    {% for profile in category.profiles %}
+                    <div class="col-md-6 col-lg-3 team-card-col" data-category="{{ category.type_id }}">
+                        <div class="team-card">
+
+                            <!-- Photo -->
+                            {% if profile.image_url %}
+                            <img src="{{ url_for('static', filename='images/team/' + profile.image_url) }}" alt="{{ profile.name }}" class="team-photo">
+                            {% else %}
+                            <div class="team-photo-placeholder">
+                                <i class="bi bi-person"></i>
+                            </div>
+                            {% endif %}
+
+                            <!-- Info -->
+                            <div class="team-info">
+                                <p class="team-type">{{ category.type }}</p>
+                                <h3 class="team-name">{{ profile.title }} {{ profile.name }}</h3>
+                                {% if profile.qualifications %}
+                                <p class="team-quals">{{ profile.qualifications }}</p>
+                                {% endif %}
+                                {% if profile.bio %}
+                                <p class="team-bio">{{ profile.bio[:120] }}...</p>
+                                {% endif %}
+                            </div>
+
+                            <!-- Referral alert for nephrologist -->
+                            {% if category.type == 'Nephrologist' %}
+                            <div class="service-alert mx-3 mb-3">
+                                <i class="bi bi-info-circle me-2"></i>Available via GP referral only
+                            </div>
+                            {% endif %}
+
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="about-cta">
+    <div class="container text-center">
+        <h2 class="about-cta-heading">Ready to book an appointment?</h2>
+        <a href="https://automedsystems.com.au/ams/clinics/5041/ocean-keys-and-currambine-family-practice-clarkson-6030/doctors/loc/2" class="btn btn-primary-cfp mt-3">Book Online</a>
+    </div>
+</section>
+
+<script>
+function filterTeam(categoryId) {
+    // Update active button
+    document.querySelectorAll('.team-filter .btn').forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+
+    // Show/hide cards
+    document.querySelectorAll('.team-card-col').forEach(card => {
+        if (categoryId === 'all' || card.dataset.category === categoryId) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+
+    // Show/hide category headings
+    document.querySelectorAll('.team-category').forEach(section => {
+        const visible = section.querySelectorAll('.team-card-col[style="display: block;"], .team-card-col:not([style])');
+        if (categoryId === 'all') {
+            section.style.display = 'block';
+        } else {
+            const hasVisible = Array.from(section.querySelectorAll('.team-card-col')).some(
+                card => card.dataset.category === categoryId
+            );
+            section.style.display = hasVisible ? 'block' : 'none';
+        }
+    });
+}
+</script>
+
 {% endblock %}
