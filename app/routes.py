@@ -16,12 +16,18 @@ def about():
 @main.route('/services')
 def services():
     return render_template('services.html')
- 
- 
+
 @main.route('/contact')
 def contact():
     return render_template('contact.html')
- 
+
+@main.route('/fees')
+def fees():
+    return render_template('fees.html')
+
+@main.route('/faq')
+def faq():
+    return render_template('faq.html') 
  
 @main.route('/appointments')
 def appointments():

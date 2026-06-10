@@ -49,8 +49,16 @@
                         <li class="nav-item">
                             <a class="nav-link {{ 'active' if request.endpoint == 'main.about' }}" href="{{ url_for('main.about') }}">About</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link {{ 'active' if request.endpoint == 'main.contact' }}" href="{{ url_for('main.contact') }}">Hours &amp; Location</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle {{ 'active' if request.endpoint in ['main.contact', 'main.fees', 'main.faq'] }}" 
+                                href="#" role="button" data-bs-toggle="dropdown">
+                                For Patients
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{{ url_for('main.contact') }}">Hours &amp; Location</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('main.fees') }}">Fees &amp; Cancellations</a></li>
+                                 <li><a class="dropdown-item" href="{{ url_for('main.faq') }}">FAQ</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
