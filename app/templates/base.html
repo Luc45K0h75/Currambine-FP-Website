@@ -15,20 +15,22 @@
         <!-- NAVBAR -->
         <nav class="navbar navbar-expand-lg sticky-top">
             <div class="container">
- 
+
                 <a class="navbar-brand" href="{{ url_for('main.index') }}">
                     <div class="nav-logo">CFP</div>
                     Currambine Family Practice
                 </a>
- 
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
                     <span class="navbar-toggler-icon"></span>
                 </button>
- 
+
                 <div class="collapse navbar-collapse" id="navMenu">
                     <ul class="navbar-nav ms-4">
+
+                        <!-- Services -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle {{ 'active' if request.endpoint == 'main.services' }}" 
+                            <a class="nav-link dropdown-toggle {{ 'active' if request.endpoint == 'main.services' }}"
                                 href="#" role="button" data-bs-toggle="dropdown">
                                 Services
                             </a>
@@ -39,29 +41,43 @@
                                 <li><a class="dropdown-item" href="{{ url_for('main.services') }}#family">Family &amp; Child Health</a></li>
                                 <li><a class="dropdown-item" href="{{ url_for('main.services') }}#chronic">Chronic Disease Management</a></li>
                                 <li><a class="dropdown-item" href="{{ url_for('main.services') }}#mental-health">Mental Health</a></li>
-                                <li><a class="dropdown-item" href="{{ url_for('main.services') }}#womens">Women's Health</a></li>
-                                <li><a class="dropdown-item" href="{{ url_for('main.services') }}#skin">Skin Checks &amp; Procedures</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('main.services') }}#family">Women's Health</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('main.services') }}#allied">Skin Checks &amp; Procedures</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="https://www.cfpdental.com/home" target="_blank">Dental <i class="bi bi-arrow-up-right ms-1"></i></a></li>
+                                <li><a class="dropdown-item" href="https://theneuropsychclinic.com.au/" target="_blank">Neuropsychology <i class="bi bi-arrow-up-right ms-1"></i></a></li>
+                                <li><a class="dropdown-item" href="https://www.theapelvichealth.com.au/" target="_blank">Physiotherapy <i class="bi bi-arrow-up-right ms-1"></i></a></li>
+                                <li><a class="dropdown-item" href="https://www.suncareskindoctors.com.au/" target="_blank">Skin Clinic <i class="bi bi-arrow-up-right ms-1"></i></a></li>
                             </ul>
                         </li>
+
+                        <!-- Our Team -->
                         <li class="nav-item">
                             <a class="nav-link {{ 'active' if request.endpoint == 'team.team_page' }}" href="{{ url_for('team.team_page') }}">Our Team</a>
                         </li>
+
+                        <!-- About -->
                         <li class="nav-item">
                             <a class="nav-link {{ 'active' if request.endpoint == 'main.about' }}" href="{{ url_for('main.about') }}">About</a>
                         </li>
+
+                        <!-- For Patients -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle {{ 'active' if request.endpoint in ['main.contact', 'main.fees', 'main.faq'] }}" 
+                            <a class="nav-link dropdown-toggle {{ 'active' if request.endpoint in ['main.contact', 'main.fees', 'main.faq'] }}"
                                 href="#" role="button" data-bs-toggle="dropdown">
                                 For Patients
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="{{ url_for('main.contact') }}">Hours &amp; Location</a></li>
                                 <li><a class="dropdown-item" href="{{ url_for('main.fees') }}">Fees &amp; Cancellations</a></li>
-                                 <li><a class="dropdown-item" href="{{ url_for('main.faq') }}">FAQ</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('main.faq') }}">FAQ</a></li>
                             </ul>
                         </li>
+
+                        <!-- Work With Us -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <a class="nav-link dropdown-toggle {{ 'active' if request.endpoint in ['main.fellows', 'main.registrars'] }}"
+                                href="#" role="button" data-bs-toggle="dropdown">
                                 Work With Us
                             </a>
                             <ul class="dropdown-menu">
@@ -69,33 +85,35 @@
                                 <li><a class="dropdown-item" href="{{ url_for('main.registrars') }}">Registrars</a></li>
                             </ul>
                         </li>
+
                     </ul>
- 
+
                     <!-- Desktop: phone number -->
-                    <a href="tel:0893041120" class="nav-phone d-none d-lg-block ms-auto me-3"><i class="bi bi-telephone me-2"></i>(08) 9304 1120</a>
+                    <a href="tel:0893041120" class="nav-phone d-none d-lg-block ms-auto me-3">
+                        <i class="bi bi-telephone me-2"></i>(08) 9304 1120
+                    </a>
                     <a href="https://automedsystems.com.au/ams/clinics/5041/ocean-keys-and-currambine-family-practice-clarkson-6030/doctors/loc/2" class="btn btn-book">Book Online</a>
- 
+
                     <!-- Mobile: phone number inside collapsed menu -->
                     <a href="tel:0893041120" class="nav-mobile-phone d-lg-none">
                         <i class="bi bi-telephone me-2"></i>(08) 9304 1120
                     </a>
                 </div>
- 
+
             </div>
         </nav>
 
         <!-- Page content goes here -->
         {% block content %}
-        
         {% endblock %}
 
         <!-- FOOTER -->
         <footer class="footer">
             <div class="container">
- 
+
                 <!-- Top row -->
                 <div class="row g-5 pb-5 footer-top">
- 
+
                     <!-- Brand -->
                     <div class="col-lg-4">
                         <div class="d-flex align-items-center gap-3 mb-3">
@@ -107,7 +125,7 @@
                             <i class="bi bi-telephone me-2"></i>(08) 9304 1120
                         </a>
                     </div>
- 
+
                     <!-- Navigate -->
                     <div class="col-6 col-lg-2">
                         <h6 class="footer-heading">Navigate</h6>
@@ -117,21 +135,35 @@
                             <li><a href="{{ url_for('main.services') }}">Services</a></li>
                             <li><a href="{{ url_for('team.team_page') }}">Our Team</a></li>
                             <li><a href="{{ url_for('main.contact') }}">Hours &amp; Location</a></li>
+                            <li><a href="{{ url_for('main.fees') }}">Fees &amp; Cancellations</a></li>
+                            <li><a href="{{ url_for('main.faq') }}">FAQ</a></li>
+                        </ul>
+                        <h6 class="footer-heading mt-4">Work With Us</h6>
+                        <ul class="footer-links">
+                            <li><a href="{{ url_for('main.fellows') }}">Fellows</a></li>
+                            <li><a href="{{ url_for('main.registrars') }}">Registrars</a></li>
                         </ul>
                     </div>
- 
+
                     <!-- Services -->
                     <div class="col-6 col-lg-3">
                         <h6 class="footer-heading">Services</h6>
                         <ul class="footer-links">
-                            <li><a href="{{ url_for('main.services') }}">General Consultations</a></li>
-                            <li><a href="{{ url_for('main.services') }}">Family &amp; Child Health</a></li>
-                            <li><a href="{{ url_for('main.services') }}">Mental Health</a></li>
-                            <li><a href="{{ url_for('main.services') }}">Women's Health</a></li>
-                            <li><a href="{{ url_for('main.services') }}">Skin Checks</a></li>
+                            <li><a href="{{ url_for('main.services') }}#general">General Consultations</a></li>
+                            <li><a href="{{ url_for('main.services') }}#family">Family &amp; Child Health</a></li>
+                            <li><a href="{{ url_for('main.services') }}#mental-health">Mental Health</a></li>
+                            <li><a href="{{ url_for('main.services') }}#family">Women's Health</a></li>
+                            <li><a href="{{ url_for('main.services') }}#allied">Skin Checks</a></li>
+                        </ul>
+                        <h6 class="footer-heading mt-4">Allied Health</h6>
+                        <ul class="footer-links">
+                            <li><a href="https://www.cfpdental.com/home" target="_blank">Dental <i class="bi bi-arrow-up-right"></i></a></li>
+                            <li><a href="https://theneuropsychclinic.com.au/" target="_blank">Neuropsychology <i class="bi bi-arrow-up-right"></i></a></li>
+                            <li><a href="https://www.theapelvichealth.com.au/" target="_blank">Physiotherapy <i class="bi bi-arrow-up-right"></i></a></li>
+                            <li><a href="https://www.suncareskindoctors.com.au/" target="_blank">Skin Clinic <i class="bi bi-arrow-up-right"></i></a></li>
                         </ul>
                     </div>
- 
+
                     <!-- Contact -->
                     <div class="col-lg-3">
                         <h6 class="footer-heading">Contact</h6>
@@ -148,9 +180,9 @@
                             <li>Sunday: Closed</li>
                         </ul>
                     </div>
- 
+
                 </div><!-- end row -->
- 
+
                 <!-- Bottom -->
                 <div class="row footer-bottom">
                     <div class="col-md-6">
@@ -160,7 +192,7 @@
                         <p>Unit 2, 4 Hobsons Gate, Currambine WA 6028</p>
                     </div>
                 </div>
- 
+
             </div>
         </footer>
 
