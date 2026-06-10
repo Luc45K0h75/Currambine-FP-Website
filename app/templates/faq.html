@@ -1,0 +1,172 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+    <div class="container">
+        <p class="section-eyebrow">For Patients</p>
+        <h1 class="page-heading">Frequently Asked Questions</h1>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+
+                <div class="accordion" id="faqAccordion">
+
+                    <div class="faq-item">
+                        <button class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            Fees &amp; Cancellations
+                            <i class="bi bi-chevron-down faq-icon"></i>
+                        </button>
+                        <div id="faq1" class="collapse faq-answer" data-bs-parent="#faqAccordion">
+                            You can find out about this on the <a href="{{ url_for('main.fees') }}">Fees &amp; Cancellations</a> page.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            Appointment Types
+                            <i class="bi bi-chevron-down faq-icon"></i>
+                        </button>
+                        <div id="faq2" class="collapse faq-answer" data-bs-parent="#faqAccordion">
+                            A standard appointment is between 10-15 minutes. Please ask the receptionist to book a long consultation if you need a general check-up, have more than one problem to address or need a consultation that will include counselling.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq3">
+                            Urgent Appointments
+                            <i class="bi bi-chevron-down faq-icon"></i>
+                        </button>
+                        <div id="faq3" class="collapse faq-answer" data-bs-parent="#faqAccordion">
+                            We reserve some urgent appointments for emergencies or urgent matters. Please let us know if you require an urgent appointment. We keep a standby list if there are no urgent appointments available.
+                            <br><br>
+                            If you are unsure whether you need to see a doctor, call Healthdirect on <strong>1800 022 222</strong> to speak with a nurse or a doctor. They can advise if your condition can wait or requires urgent care. More information is available at <a href="https://www.healthdirect.gov.au/" target="_blank">healthdirect.gov.au</a>.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq4">
+                            Scripts, Referrals or Medical Certificates
+                            <i class="bi bi-chevron-down faq-icon"></i>
+                        </button>
+                        <div id="faq4" class="collapse faq-answer" data-bs-parent="#faqAccordion">
+                            If you need a referral to a specialist, please make an appointment at least one week prior to your specialist appointment. This allows your doctor to write a letter containing all the relevant information. Please note that it is illegal for doctors to backdate a referral.
+                            <br><br>
+                            If you need a prescription, we ask that you book an appointment when you are on your last repeat. Doctors often need to check that the medication is still appropriate, optimal and safe.
+                            <br><br>
+                            If you need a medical certificate, you will need to see a doctor to certify that you are unfit for work. To do this, please book an appointment.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq5">
+                            Your Records
+                            <i class="bi bi-chevron-down faq-icon"></i>
+                        </button>
+                        <div id="faq5" class="collapse faq-answer" data-bs-parent="#faqAccordion">
+                            We keep your records electronically on a secure server. This includes tests, letters, certificates, correspondence, prescriptions, and referrals.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq6">
+                            Phone Results &amp; Calls
+                            <i class="bi bi-chevron-down faq-icon"></i>
+                        </button>
+                        <div id="faq6" class="collapse faq-answer" data-bs-parent="#faqAccordion">
+                            If your doctor needs to see you to discuss your results, you will receive a phone call from one of our nurses to book a follow-up appointment. If you have not heard from us, please call our reception one week after the test was collected. If you want further information, you may need to make an appointment to discuss the results with your doctor.
+                            <br><br>
+                            Privacy laws make it illegal for us to disclose any information about a patient, even to family members, without their prior consent. If you want a family member to have access to your results, please let our receptionists know to make a note of this in your records.
+                            <br><br>
+                            Doctors generally cannot take patients' phone calls whilst they are consulting. Your doctor will return your call as soon as possible. Please let us know if there is an urgent matter.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq7">
+                            After Hours
+                            <i class="bi bi-chevron-down faq-icon"></i>
+                        </button>
+                        <div id="faq7" class="collapse faq-answer" data-bs-parent="#faqAccordion">
+                            Our after hours service is run by Dial A Doctor <strong>1300 030 030</strong>. Call them for urgent review after hours or visit their website.
+                            <br><br>
+                            Alternatively, an after hours GP service operates from 7pm to 11pm weekdays and 11am to 11pm weekends. The phone number is <a href="tel:0894009988">(08) 9400 9988</a>.
+                            <br><br>
+                            <strong>Joondalup After Hours GP</strong><br>
+                            60 Shenton Avenue, Joondalup 6027
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq8">
+                            Emergencies (After Hours)
+                            <i class="bi bi-chevron-down faq-icon"></i>
+                        </button>
+                        <div id="faq8" class="collapse faq-answer" data-bs-parent="#faqAccordion">
+                            If you have an emergency, go to the emergency department:
+                            <br><br>
+                            <strong>Joondalup Health Campus</strong><br>
+                            60 Shenton Avenue, Joondalup 6027
+                            <br><br>
+                            If you are unsure whether you need to see a doctor, call Healthdirect on <strong>1800 022 222</strong> to speak with a nurse or a doctor.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq9">
+                            Complaints, Compliments &amp; Suggestions
+                            <i class="bi bi-chevron-down faq-icon"></i>
+                        </button>
+                        <div id="faq9" class="collapse faq-answer" data-bs-parent="#faqAccordion">
+                            We want to make you happy. We're proud of our practice, but if you have any feedback, please contact us.
+                            <br><br>
+                            <strong>The Practice Manager</strong><br>
+                            Currambine Family Practice<br>
+                            2/4 Hobsons Gate, Currambine 6028
+                            <br><br>
+                            We take all complaints seriously and your feedback is important to us.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq10">
+                            Reminders
+                            <i class="bi bi-chevron-down faq-icon"></i>
+                        </button>
+                        <div id="faq10" class="collapse faq-answer" data-bs-parent="#faqAccordion">
+                            We may not recall you for routine vaccinations; however you will always be recalled for a pap smear.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq11">
+                            Care Plans &amp; Allied Health Referral
+                            <i class="bi bi-chevron-down faq-icon"></i>
+                        </button>
+                        <div id="faq11" class="collapse faq-answer" data-bs-parent="#faqAccordion">
+                            Medicare requirements for the visits are that you have a chronic medical condition that has complex care needs. If you fulfil these conditions, a GP care plan and referral can be created.
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="about-cta">
+    <div class="container text-center">
+        <h2 class="about-cta-heading">Still have questions?</h2>
+        <a href="{{ url_for('main.contact') }}" class="btn btn-primary-cfp mt-3">Contact Us</a>
+    </div>
+</section>
+
+{% endblock %}
