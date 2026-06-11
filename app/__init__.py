@@ -12,7 +12,7 @@ mail = Mail() # Initialize mail extension
 
 def create_app():
     app = Flask(__name__)
-    app.config.from_object('config.DevelopmentConfig')
+    app.config.from_object('config.ProductionConfig')
 
     # Initialise extensions
     db.init_app(app)
