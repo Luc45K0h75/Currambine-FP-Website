@@ -1,0 +1,202 @@
+{
+  "types": [
+    {
+      "type_id": 1,
+      "type": "General Practitioner"
+    },
+    {
+      "type_id": 2,
+      "type": "Dentist"
+    },
+    {
+      "type_id": 3,
+      "type": "Psychologist"
+    },
+    {
+      "type_id": 4,
+      "type": "Neuropsychologist"
+    },
+    {
+      "type_id": 5,
+      "type": "Physiotherapist"
+    },
+    {
+      "type_id": 6,
+      "type": "Skin Specialist"
+    },
+    {
+      "type_id": 7,
+      "type": "Nephrologist"
+    }
+  ],
+  "profiles": [
+    {
+      "name": "Catherine Rolfe",
+      "title": "Dr",
+      "qualifications": null,
+      "bio": "Dr Rolfe graduated from the University of Western Australia. She has an interest in Menopause and Gender diversity as well as all aspects of women's and children's health.",
+      "doctor_type": 1,
+      "image_url": "catherinerolfe.webp"
+    },
+    {
+      "name": "Claire Isaachsen",
+      "title": "Dr",
+      "qualifications": "Diploma of Child Health, Diploma of Sexual and Reproductive Healthcare",
+      "bio": "Dr Isaachsen graduated from the University of Notre Dame Fremantle. She has completed the Diploma of Child Health and worked in the NHS, completing a Diploma of Sexual and Reproductive Healthcare while living in England. Claire enjoys all aspects of general practice and is experienced in paediatrics, allergy, women's health, antenatal and palliative care. She is qualified in Implanon insertions and IUD removals. Claire is available for appointments Monday, Wednesday and Friday.",
+      "doctor_type": 1,
+      "image_url": "claireisaachsen.webp"
+    },
+    {
+      "name": "Jan Fonseca",
+      "title": "Dr",
+      "qualifications": null,
+      "bio": "Dr Fonseca graduated from the Australian National University and University of British Columbia in Canada, completing her fellowship in Western Australia. Jan enjoys all aspects of medicine, but has a special interest in managing women's health, paediatrics, travel medicine and palliative care. Jan has experience in minor surgical procedures, particularly iron infusions for managing iron deficiency anaemia. Jan is currently available Mondays, Thursday afternoons and Friday mornings.",
+      "doctor_type": 1,
+      "image_url": "janfonseca.webp"
+    },
+    {
+      "name": "Jaspreet Hans",
+      "title": "Dr",
+      "qualifications": "Diploma in Paediatrics, Diploma in Women's Health, Certificate of Youth Psychiatry",
+      "bio": "Dr Hans enjoys the broad scope of general practice and sees patients in all aspects of general practice. She has worked across multiple areas of paediatric and adult medicine at Perth Children's Hospital and St John of God Hospitals. Jaspreet is especially passionate about working with children and supporting women's health. She also performs iron infusions. Jaspreet has postgraduate qualifications including a Diploma in Paediatrics (Ireland), a Diploma in Women's Health (Ireland), and a Certificate of Youth Psychiatry (Orygen, Melbourne). Jaspreet is available for appointments from Monday to Thursday.",
+      "doctor_type": 1,
+      "image_url": "jaspreethhans.webp"
+    },
+    {
+      "name": "Anita Bohmer",
+      "title": "Dr",
+      "qualifications": "Vocational Graduate Diploma in Women's Health, Diploma in Child Health",
+      "bio": "Dr Bohmer graduated from the University of Pretoria in South Africa. Having done a lot of work with women and children, she has a special interest in paediatrics, women's health and psychiatry. She particularly enjoys helping women through the antenatal and postnatal periods as well as caring for children of all ages. She has a Vocational Graduate Diploma in Women's Health and a Diploma in Child Health and is able to do Mirena and Implanon insertions. Due to personal beliefs, Anita does not refer patients for pregnancy terminations. Anita is available for consultations from Monday to Friday.",
+      "doctor_type": 1,
+      "image_url": "anitabohmer.webp"
+    },
+    {
+      "name": "Rachel Hunter",
+      "title": "Dr",
+      "qualifications": null,
+      "bio": "Dr Rachel Hunter graduated from the University of Notre Dame in Fremantle in 2016. She worked at Royal Perth Hospital for a number of years before making the transition into General Practice. She has spent the last four years working in Regional WA (both Midwest and South West) and recently moved back to Perth with her family. Rachel enjoys the variety that General Practice has to offer and has a special interest in child health and women's health. She performs Mirena/Kyleena insertions and removals as well as Implanon insertions and removals. Please note Dr Hunter is currently on Maternity Leave, returning in 2026.",
+      "doctor_type": 1,
+      "image_url": "rachelhunter.webp"
+    },
+    {
+      "name": "Luke Finkelstein",
+      "title": "Dr",
+      "qualifications": null,
+      "bio": "Dr Finkelstein graduated with honours from the University of Western Australia, having previously completed a Bachelor of Pharmacy at Curtin University. Luke is interested in all aspects of general practice, including paediatrics and aged care. Luke is available for consultations on Mondays, Wednesdays and Thursdays.",
+      "doctor_type": 1,
+      "image_url": "lukefinkelstein.webp"
+    },
+    {
+      "name": "Lissie Swingler",
+      "title": "Dr",
+      "qualifications": null,
+      "bio": "Dr Swingler graduated from the University of Western Australia. Lissie has a special interest in women's health, antenatal care, contraception, child health, palliative care and travel medicine. She is experienced in the insertion and removal of Implanon devices, the insertion and removal of Mirena and Kyleena devices, copper IUDs and iron infusions. Lissie is available on Tuesday and Friday mornings.",
+      "doctor_type": 1,
+      "image_url": "lissieswingler.webp"
+    },
+    {
+      "name": "Sarvin Randhawa",
+      "title": "Dr",
+      "qualifications": "FRACGP, MBBS (Hons), BPharm, DCH, Cert MedEd (ESME)",
+      "bio": "Dr Sarvin Randhawa is a General Practitioner with a Bachelor of Medicine and Bachelor of Surgery (Honours) from the University of Notre Dame Fremantle. She also holds a Bachelor of Pharmacy and additional qualifications in paediatrics and medical education. A Fellow of the RACGP, Dr Randhawa has a special interest in paediatrics and women's health, and is committed to providing comprehensive, evidence-based care to patients of all ages. She continues to work as a medical educator for the RACGP. She has worked as a doctor in rural Tasmania for the last 10 years and returns to Perth to be close to her family.",
+      "doctor_type": 1,
+      "image_url": "sarvinrandhawa.webp"
+    },
+    {
+      "name": "Janet Hutchens",
+      "title": "Dr",
+      "qualifications": null,
+      "bio": "Dr Hutchens is a graduate of UWA and has worked in Emergency Medicine, General Medicine, Paediatrics, Plastic Surgery and Geriatrics prior to training in General Practice. She is interested in all aspects of General Practice, with special interests in Skin Cancer Medicine, Women's Health and Menopause, Antenatal care and Paediatrics. Please note Dr Hutchens does not see Workers Compensation patients.",
+      "doctor_type": 1,
+      "image_url": "janethutchens.webp"
+    },
+    {
+      "name": "Kavin Intrada",
+      "title": "Dr",
+      "qualifications": "MBBS (UWA), Postgraduate Diploma in Children's Health (University of Sydney)",
+      "bio": "Dr Intrada graduated from the University of Western Australia and completed a postgraduate diploma in children's health from the University of Sydney. He completed his internship at Sir Charles Gairdner Hospital and worked across multiple different medical and surgical disciplines. He is currently balancing being a GP with working at an urgent care clinic alongside an academic role at Curtin University School of Medicine. Kavin has a focus for procedural work such as ingrown toenail removals, iron infusions, skin surgery, ear wax microsuction and Implanon insertions. Please note he does not prescribe drugs of dependence such as benzodiazepines and opioids.",
+      "doctor_type": 1,
+      "image_url": "kavinintrada.webp"
+    },
+    {
+      "name": "Michele Delacretaz",
+      "title": "Dr",
+      "qualifications": "Certificate in Sexual and Reproductive Health (FPAA)",
+      "bio": "Dr Delacretaz is passionate about providing comprehensive GP care for patients of all ages. A graduate of The University of Notre Dame in Fremantle, she gained valuable experience at Royal Perth Hospital as well as in Emergency and Paediatrics at Peel Hospital. She holds a Certificate in Sexual and Reproductive Health from FPAA and brings unique insight from her background as a midwife. Her areas of special interest include women's health and wellbeing, infant health, and weight management. Michele is available for consultation on Monday, Tuesday, Thursday and Friday.",
+      "doctor_type": 1,
+      "image_url": "micheledelacretaz.webp"
+    },
+    {
+      "name": "Germaine Wilkinson",
+      "title": "Dr",
+      "qualifications": null,
+      "bio": "Dr Wilkinson graduated from the University of Nottingham. Germaine enjoys all aspects of medicine, but has a special interest in women's health, antenatal care, contraception, travel health, and elderly health. She is experienced in occupational health and minor surgical procedures. Germaine is available for consultation on Mondays, Tuesdays, Thursdays and Fridays. Dr Wilkinson is currently offering bulk billing to children under 16 and pensioners over 65; all other patients will be privately billed.",
+      "doctor_type": 1,
+      "image_url": "germainewilkinson.webp"
+    },
+    {
+      "name": "Lauren Johnson",
+      "title": "Dr",
+      "qualifications": "MBBS FRACGP",
+      "bio": "Dr Johnson graduated from the University of Western Australia. She is experienced in infant and child health with a special interest in eczema and food allergy. She is also experienced in women's health, pregnancy planning and antenatal care.",
+      "doctor_type": 1,
+      "image_url": "laurenjohnson.webp"
+    },
+    {
+      "name": "Hang Pham",
+      "title": "Dr",
+      "qualifications": "BDSC (UWA)",
+      "bio": "Hang has over 20 years of experience in private dentistry in Perth. She knows how important it is to find a dentist that you can trust. From the moment you make a booking to when you have finished a consultation, her priority is to have you feeling comfortable and confident in the care you receive. She takes the time to understand what your worries are and what is important to you. Hang sees general dental patients of all ages from young children to adults and specialises in treating anxious patients. Hang is available on weekdays. For appointments call or text: 0402 210 273.",
+      "doctor_type": 2,
+      "image_url": "hangpham.webp"
+    },
+    {
+      "name": "Shamira Edwards",
+      "title": "",
+      "qualifications": "Registered Psychologist",
+      "bio": "Shamira is a registered psychologist with extensive experience in both clinical and organisational psychology. She provides compassionate, evidenced-based care to individuals across the lifespan and has special interests in the management of anxiety, depression, trauma, stress, adjustment to life transitions, ADHD, relationship difficulties, and coping with health-related challenges. Shamira draws on a range of evidence-based treatments including CBT, ACT, EMDR, IPT and Emotion Focused Therapy, and works closely with GPs and other health professionals to ensure coordinated, patient-centred care.",
+      "doctor_type": 3,
+      "image_url": "shamiraedwards.webp"
+    },
+    {
+      "name": "Cindy Cabeleira",
+      "title": "Dr",
+      "qualifications": "Clinical Neuropsychologist, MPsych, PhD (UWA)",
+      "bio": "Cindy completed her Master of Psychology and PhD in Clinical Neuropsychology at the University of Western Australia. Since 2014, she has held clinical positions within the WA Department of Health and worked in private practice. She works with adults from middle adolescence (age 16+) to older adulthood, undertaking neuropsychological and clinical assessments including diagnostic ADHD and Autism Spectrum Disorder assessments, as well as assessments to differentiate and diagnose various types of dementia. Areas of special interest include dementia, epilepsy, brain injury, and decision-making capacity. Please visit The Neuropsych Clinic for more information.",
+      "doctor_type": 4,
+      "image_url": "cindycabeleira.webp"
+    },
+    {
+      "name": "Nicola Gibson",
+      "title": "",
+      "qualifications": "BSc Physiotherapy (Curtin University)",
+      "bio": "Nicola is an experienced and compassionate physiotherapist with a special interest in pelvic health. She completed her Bachelor of Science (Physiotherapy) at Curtin University in 2016 and her postgraduate training in continence and women's health in 2020. As the Principal Physiotherapist of Thea Pelvic Health Physiotherapy, Nicola is skilled in assessing and managing pelvic health conditions including urinary incontinence, pelvic organ prolapse, pelvic pain, ano-rectal dysfunction, and has a passion for supporting women through their pregnancy and postpartum journey. Please visit Thea Pelvic Health Physiotherapy for more information.",
+      "doctor_type": 5,
+      "image_url": "nicolagibson.webp"
+    },
+    {
+      "name": "Eu-Jinn Teh",
+      "title": "Dr",
+      "qualifications": "MBBS (UWA) FRACGP DCH",
+      "bio": "Eu-Jinn is a locally trained GP who has worked in skin cancer medicine for over 10 years. He has extensive surgical experience having worked for many years in General Surgery at numerous hospitals around Perth. Eu-Jinn is highly skilled at managing skin cancer in all areas of the body, including cosmetically sensitive areas such as the face and difficult surgical areas such as the lower leg. He is able to undertake advanced surgical procedures such as flaps or skin grafts, and also specialises in removing lipomas, sebaceous cysts, or moles for cosmetic reasons. He is a member of the Skin Cancer College of Australia and holds the Professional Certificate in Dermoscopy and the Advanced Certificate in Skin Cancer Surgery Principles. For bookings please visit Suncare Skin Doctors.",
+      "doctor_type": 6,
+      "image_url": "eujinnteh.webp"
+    },
+    {
+      "name": "Hadley Markus",
+      "title": "Dr",
+      "qualifications": "Nephrologist - Kidney Specialist",
+      "bio": "Dr Hadley Markus is an experienced Nephrologist who is available for patient appointments via GP Referral.",
+      "doctor_type": 7,
+      "image_url": "hadleymarkus.webp"
+    },
+    {
+      "name": "Robert Green",
+      "title": "Dr",
+      "qualifications": null,
+      "bio": "Dr Green is a GP who has a specialist interest in ENT. He qualified from Southampton University (UK) in 2006 and spent four years working in a busy District General Hospital, with two of these years spent in ENT. He then spent three years training to become a GP in Hampshire, England after which he became a partner in a suburban practice. He is trained in dermoscopy, skin biopsies, minor surgery and shoulder injections. He also has extensive experience in men's health, chronic conditions and paediatrics.",
+      "doctor_type": 1,
+      "image_url": "robertgreen.webp"
+    }
+  ]
+}
