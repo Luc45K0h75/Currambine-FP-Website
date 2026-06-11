@@ -32,7 +32,3 @@ def faq():
 @main.route('/appointments')
 def appointments():
     return render_template('appointments.html')
-
-@main.route('/registrars')
-def registrars():
-    return render_template('registrars.html')
