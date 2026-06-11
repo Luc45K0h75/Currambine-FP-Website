@@ -5,7 +5,7 @@ from wtforms.validators import DataRequired, Email, Length, Optional
 class RegistrarsApplicationForm(FlaskForm):
     name = StringField('Full Name', validators=[DataRequired(), Length(max=100)])
     email = StringField('Email', validators=[DataRequired(), Email()])
-    phone = StringField('Phone Number', validators=[DataRequired(), Length(max=20)])
+    phone = StringField('Phone Number', validators=[Length(max=20)])
     term = SelectField('Preferred Term', choices=[
         ('', 'Select term'),
         ('term_1', 'Term 1'),
