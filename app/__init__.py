@@ -4,13 +4,13 @@ from flask_migrate import Migrate
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 from flask_mail import Mail
-from flask_sitemap import Sitemap
+
 
 db = SQLAlchemy()
 migrate = Migrate()
 limiter = Limiter(key_func=get_remote_address) # Initialize limiter with key function
 mail = Mail() # Initialize mail extension
-sitemap = Sitemap() # Initialize sitemap extension
+
 
 def create_app():
     app = Flask(__name__)
@@ -21,7 +21,7 @@ def create_app():
     migrate.init_app(app, db)
     limiter.init_app(app)  # Initialize limiter with the app for DDOS protection
     mail.init_app(app)  # Initialize mail extension with the app
-    sitemap.init_app(app)  # Initialize sitemap extension with the app
+
 
     # Import models so Flask-Migrate can detect them
     from app import models
