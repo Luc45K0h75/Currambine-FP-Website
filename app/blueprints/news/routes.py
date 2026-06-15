@@ -9,7 +9,7 @@ def news_page():
         .order_by(News.created_at.desc())\
         .paginate(page=page, per_page=10, error_out=False)
     
-    return render_template('news/news.html', posts=posts, seo={
+    return render_template('news.html', posts=posts, seo={
         'title': "What's New | Currambine Family Practice",
         'description': 'Latest news and announcements from Currambine Family Practice.'
     })
