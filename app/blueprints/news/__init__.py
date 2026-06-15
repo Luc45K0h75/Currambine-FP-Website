@@ -1,0 +1,5 @@
+from flask import Blueprint
+
+news = Blueprint('news', __name__, template_folder='templates')
+
+from . import routes
