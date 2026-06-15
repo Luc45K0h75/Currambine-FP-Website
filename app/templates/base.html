@@ -30,6 +30,9 @@
                 <div class="collapse navbar-collapse" id="navMenu">
                     <ul class="navbar-nav ms-4">
 
+                        <!-- News -->
+                        <li><a class="dropdown-item" href="{{ url_for('news.news_page') }}">What's New</a></li>
+                        
                         <!-- Services -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle {{ 'active' if request.endpoint == 'main.services' }}"
