@@ -15,6 +15,7 @@ venv/
 env/
 seed.py
 seed2.py
+seed3.py
 
 # OS
 .DS_Store

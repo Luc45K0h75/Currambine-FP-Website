@@ -36,6 +36,8 @@ class News(db.Model):
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
     published = db.Column(db.Boolean, default=True)  # False = draft, True = live
+    link = db.Column(db.String(255), nullable=True)  # Optional external link
+    link_text = db.Column(db.String(100), nullable=True)  # e.g. "Find out more"
 
     def __repr__(self):
         return f'<News {self.title}>'
