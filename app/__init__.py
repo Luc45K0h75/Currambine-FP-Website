@@ -38,6 +38,10 @@ def create_app():
     from app.blueprints.fellows import fellows as fellows_bp
     app.register_blueprint(fellows_bp)
 
+    # Register news blueprint
+    from app.blueprints.news import news as news_bp
+    app.register_blueprint(news_bp)
+
     # Register registrars blueprint
     from app.blueprints.registrars import registrars as registrars_bp
     app.register_blueprint(registrars_bp)
