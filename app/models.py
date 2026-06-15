@@ -24,8 +24,18 @@ class Profile(db.Model):
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     category = db.relationship('DoctorType', back_populates='profiles')
 
-
-
     def __repr__(self):
         return f'<Profile {self.name}>'
-    
+
+# News posts managed via admin panel
+class News(db.Model):
+    __tablename__ = 'news'
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(200), nullable=False)
+    content = db.Column(db.Text, nullable=False)
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+    published = db.Column(db.Boolean, default=True)  # False = draft, True = live
+
+    def __repr__(self):
+        return f'<News {self.title}>'
