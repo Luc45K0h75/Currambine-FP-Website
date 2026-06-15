@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container">
+
+        <div class="row mb-5">
+            <div class="col">
+                <h1 class="section-title">What's New?</h1>
+                <p class="section-subtitle">Latest news and announcements from Currambine Family Practice.</p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            {% for post in posts.items %}
+            <div class="col-12">
+                <div class="card news-card h-100">
+                    <div class="card-body">
+                        <p class="news-date">{{ post.created_at.strftime('%d %B %Y') }}</p>
+                        <h3 class="news-title">{{ post.title }}</h3>
+                        <p class="news-content">{{ post.content }}</p>
+                        {% if post.link %}
+                        <a href="{{ post.link }}" class="btn btn-outline-primary mt-2" target="_blank">
+                            {{ post.link_text or 'Find out more' }} <i class="bi bi-arrow-up-right ms-1"></i>
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% else %}
+            <div class="col">
+                <p>No news at this time. Please check back soon.</p>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Pagination -->
+        {% if posts.pages > 1 %}
+        <div class="row mt-5">
+            <div class="col d-flex justify-content-center">
+                <nav>
+                    <ul class="pagination">
+                        {% if posts.has_prev %}
+                        <li class="page-item">
+                            <a class="page-link" href="{{ url_for('news.news_page', page=posts.prev_num) }}">Previous</a>
+                        </li>
+                        {% endif %}
+                        {% for num in posts.iter_pages() %}
+                        <li class="page-item {{ 'active' if num == posts.page }}">
+                            <a class="page-link" href="{{ url_for('news.news_page', page=num) }}">{{ num }}</a>
+                        </li>
+                        {% endfor %}
+                        {% if posts.has_next %}
+                        <li class="page-item">
+                            <a class="page-link" href="{{ url_for('news.news_page', page=posts.next_num) }}">Next</a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        {% endif %}
+
+    </div>
+</section>
+{% endblock %}
