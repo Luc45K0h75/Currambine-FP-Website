@@ -1145,9 +1145,13 @@ body {
         padding: 56px 0;
     }
 
-    .team-photo,
+    .team-photo {
+        height: 320px;
+        object-position: center top;
+    }
+
     .team-photo-placeholder {
-        height: 200px;
+        height: 320px;
     }
 }
 
